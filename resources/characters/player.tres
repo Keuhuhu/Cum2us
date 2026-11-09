@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/character/character_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+character_id = &"player"
+display_name = "Adventurer"
+description = "A customizable party member."
+character_class = &"wanderer"
+starting_level = 1
+starting_experience = 0
+max_hp = 120
+max_mp = 40
+attack = 12
+defense = 8
+magic_attack = 10
+magic_defense = 8
+speed = 10
+starting_skills = Array[StringName]([])

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/inventory/item_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/items/alchemy/healing_herb_16x16.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+item_id = &"healing_herb"
+display_name = "Healing Herb"
+description = "A field herb that restores a little HP to one ally."
+icon = ExtResource("2")
+category = 0
+buy_price = 15
+sell_price = 7
+stackable = true
+max_stack = 99
+use_effect = 1
+effect_amount = 25
+usable_in_battle = true
+usable_outside_battle = true
