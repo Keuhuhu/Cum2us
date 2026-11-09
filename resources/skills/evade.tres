@@ -1,22 +1,19 @@
-[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://ckhhekd1du3k1"]
 
-[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/SkillDodge.png" id="2"]
+[ext_resource type="Script" uid="uid://j3la1pb7k3nt" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://c3outopervuxg" path="res://scripts/effects/effect_data.gd" id="1_jvbmb"]
+[ext_resource type="Texture2D" uid="uid://bmmqij8pwbqh1" path="res://assets/ui/skills/wiki/SkillDodge.png" id="2"]
 
 [resource]
 script = ExtResource("1")
 skill_id = &"evade"
 display_name = "Evade"
 description = "Move quickly to evade enemy attacks."
-category = 0
 icon = ExtResource("2")
 target = 3
 effect = 8
 mp_cost = 3
-hit_count = 1
-power_multiplier = 1.0
 scaling_stat = &"speed"
-element = &"none"
 duration_turns = 1
 source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
 source_note = "MP Cost: 3 | For one turn: | - Evasion Rate +100% | - Mag. Evasion Rate +100% | - SPD * 110% | - All Element Rates * 0%"

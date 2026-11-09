@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://crh3mgunydmnc"]
 
-[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/IconHeart.png" id="2"]
+[ext_resource type="Script" uid="uid://j3la1pb7k3nt" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cng7fali5tf0u" path="res://assets/ui/skills/wiki/IconHeart.png" id="2"]
 
 [resource]
 script = ExtResource("1")
@@ -13,10 +13,11 @@ icon = ExtResource("2")
 target = 3
 effect = 4
 mp_cost = 10
-hit_count = 1
-power_multiplier = 1.0
+cooldown_turns = null
+hit_count = null
+power_multiplier = null
 scaling_stat = &"magic_attack"
-element = &"none"
-duration_turns = 0
+element = null
+duration_turns = null
 source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
 source_note = "MP Cost: 10 | Summons Catherine in-battle"
