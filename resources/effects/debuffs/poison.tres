@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PoisonEffect" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/effects/types/poison_effect.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+effect_name = "Poison"
+description = "Deals damage at the start of each turn."
+status_id = &"poison"
+duration_turns = 3
+stacking_policy = 1
+damage_per_turn = 3

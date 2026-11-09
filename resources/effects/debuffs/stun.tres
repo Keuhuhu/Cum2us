@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StunEffect" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/effects/types/stun_effect.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+effect_name = "Stun"
+description = "Makes the target skip its turn."
+status_id = &"stun"
+duration_turns = 1
+stacking_policy = 1

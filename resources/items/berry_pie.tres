@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://im5t2a5hvmrc"]
 
-[ext_resource type="Script" path="res://scripts/inventory/item_data.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/items/food/berry_pie_16x16.png" id="2"]
+[ext_resource type="Script" uid="uid://chr1a56fi6wjq" path="res://scripts/inventory/item_data.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://b54ls57jan25x" path="res://assets/items/food/berry_pie_16x16.png" id="2"]
+[ext_resource type="Resource" path="res://resources/effects/healing/heal_40.tres" id="3"]
+[ext_resource type="Script" uid="uid://c3outopervuxg" path="res://scripts/effects/effect_data.gd" id="4"]
 
 [resource]
 script = ExtResource("1")
@@ -9,12 +11,9 @@ item_id = &"berry_pie"
 display_name = "Berry Pie"
 description = "A sweet pie that restores HP to one ally."
 icon = ExtResource("2")
-category = 0
 buy_price = 35
 sell_price = 17
-stackable = true
 max_stack = 20
-use_effect = 1
-effect_amount = 40
+effects = Array[ExtResource("4")]([ExtResource("3")])
 usable_in_battle = true
 usable_outside_battle = true

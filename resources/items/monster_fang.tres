@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c27s8hoy8a27a"]
 
-[ext_resource type="Script" path="res://scripts/inventory/item_data.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/items/loot/monster_fang_16x16.png" id="2"]
+[ext_resource type="Script" uid="uid://chr1a56fi6wjq" path="res://scripts/inventory/item_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://c3outopervuxg" path="res://scripts/effects/effect_data.gd" id="1_dpcy5"]
+[ext_resource type="Texture2D" uid="uid://c4cigsg681maf" path="res://assets/items/loot/monster_fang_16x16.png" id="2"]
 
 [resource]
 script = ExtResource("1")
@@ -12,9 +13,3 @@ icon = ExtResource("2")
 category = 1
 buy_price = 20
 sell_price = 10
-stackable = true
-max_stack = 99
-use_effect = 0
-effect_amount = 0
-usable_in_battle = false
-usable_outside_battle = false

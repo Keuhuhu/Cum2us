@@ -10,13 +10,6 @@ enum Category {
 	KEY_ITEM,
 }
 
-enum UseEffect {
-	NONE,
-	RESTORE_HP,
-	RESTORE_MP,
-	REVIVE,
-}
-
 @export_group("Identity")
 @export var item_id: StringName
 @export var display_name: String = "Item"
@@ -31,8 +24,7 @@ enum UseEffect {
 @export_range(1, 999, 1) var max_stack: int = 99
 
 @export_group("Use effect")
-@export var use_effect: UseEffect = UseEffect.NONE
-@export_range(0, 999999, 1) var effect_amount: int = 0
+@export var effects: Array[EffectData] = []
 @export var usable_in_battle: bool = false
 @export var usable_outside_battle: bool = false
 
@@ -42,8 +34,9 @@ func is_valid_definition() -> bool:
 		return false
 	if not stackable and max_stack != 1:
 		return false
-	if use_effect != UseEffect.NONE and effect_amount <= 0:
-		return false
+	for effect in effects:
+		if effect == null:
+			return false
 	return true
 
 

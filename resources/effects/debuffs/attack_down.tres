@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DebuffEffect" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/effects/types/debuff_effect.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+effect_name = "Attack Down"
+description = "Decrease attack by 5 for 3 turns."
+stat = 2
+amount = 5
+duration_turns = 3
