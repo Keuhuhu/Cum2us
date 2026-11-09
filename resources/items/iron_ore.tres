@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/inventory/item_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/items/minerals/iron_ore_16x16.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+item_id = &"iron_ore"
+display_name = "Iron Ore"
+description = "A chunk of iron ore used for crafting."
+icon = ExtResource("2")
+category = 1
+buy_price = 12
+sell_price = 6
+stackable = true
+max_stack = 99
+use_effect = 0
+effect_amount = 0
+usable_in_battle = false
+usable_outside_battle = false

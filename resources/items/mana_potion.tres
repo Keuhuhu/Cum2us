@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/inventory/item_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/items/alchemy/mana_potion_16x16.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+item_id = &"mana_potion"
+display_name = "Mana Potion"
+description = "Restores MP to one ally."
+icon = ExtResource("2")
+category = 0
+buy_price = 60
+sell_price = 30
+stackable = true
+max_stack = 99
+use_effect = 2
+effect_amount = 30
+usable_in_battle = true
+usable_outside_battle = true
