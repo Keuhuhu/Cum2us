@@ -38,7 +38,7 @@ enum Effect {
 
 @export_group("Battle")
 @export var target: Target = Target.SINGLE_ENEMY
-@export var effect: Effect = Effect.DAMAGE
+@export var effects: Array[EffectData] = []
 @export_range(0, 99999, 1) var mp_cost: int = 0
 @export_range(0, 99, 1) var cooldown_turns: int = 0
 @export_range(0, 99, 1) var hit_count: int = 1
@@ -46,6 +46,7 @@ enum Effect {
 @export var scaling_stat: StringName = &"attack"
 @export var element: StringName = &"none"
 @export_range(0, 99, 1) var duration_turns: int = 0
+
 
 @export_group("Source")
 @export var source_page: String
@@ -57,6 +58,5 @@ func is_valid_definition() -> bool:
 		return false
 	if hit_count < 1:
 		return false
-	if effect == Effect.DAMAGE and power_multiplier <= 0.0:
-		return false
+
 	return true

@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://cvs5egvwyletv"]
 
-[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/SkillRestore.png" id="2"]
+[ext_resource type="Script" uid="uid://j3la1pb7k3nt" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://c3outopervuxg" path="res://scripts/effects/effect_data.gd" id="1_hisgp"]
+[ext_resource type="Texture2D" uid="uid://2d6ynt8fo4mp" path="res://assets/ui/skills/wiki/SkillRestore.png" id="2"]
 
 [resource]
 script = ExtResource("1")
@@ -11,12 +12,8 @@ description = "Cure all ailments with the exception of faint from the target all
 category = 1
 icon = ExtResource("2")
 target = 4
-effect = 6
 mp_cost = 3
-hit_count = 1
-power_multiplier = 1.0
 scaling_stat = &"magic_attack"
 element = &"ice"
-duration_turns = 0
 source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
 source_note = "MP Cost: 3 | Removes: | - Poison | - Blind | - Silence | - Confusion | - Sleep | - Paralysis | - Bleed | - Disarmed | - Frozen | - Burning | - Fragile | - Enfeebled | - Terrified | - Deceleration"

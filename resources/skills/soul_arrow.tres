@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://bymeengnhbgv0"]
 
-[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/ElementHoly.png" id="2"]
+[ext_resource type="Script" uid="uid://j3la1pb7k3nt" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://c3outopervuxg" path="res://scripts/effects/effect_data.gd" id="1_d7o3h"]
+[ext_resource type="Texture2D" uid="uid://cgebexlukh3mm" path="res://assets/ui/skills/wiki/ElementHoly.png" id="2"]
 
 [resource]
 script = ExtResource("1")
@@ -10,13 +11,9 @@ display_name = "Soul Arrow"
 description = "Shoot a soul arrow at the target enemy. The power scales with the caster's Magic."
 category = 1
 icon = ExtResource("2")
-target = 0
-effect = 0
 mp_cost = 6
-hit_count = 1
 power_multiplier = 6.0
 scaling_stat = &"magic_attack"
 element = &"holy"
-duration_turns = 0
 source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
 source_note = "MP Cost: 6 | HP Damage: | (a.mat * 6 - b.mdf * 2) | Ignores Magic Reflection"
