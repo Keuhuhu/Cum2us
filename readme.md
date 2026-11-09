@@ -219,3 +219,39 @@ Save	        Save dan load progress
 Time	        Sistem waktu dalam game
 ```
 
+## Effect system
+
+`EffectData` adalah definisi statis yang dapat dipakai ulang oleh item, skill, equipment, musuh, atau interaksi lingkungan. `EffectContext` membawa source, target, origin, dan data tambahan. `EffectExecutor` menjalankan satu atau banyak efek secara berurutan dan berhenti pada hasil gagal. `EffectResult` melaporkan keberhasilan dan jumlah yang diterapkan.
+
+Efek instan yang tersedia: `HealEffect`, `DamageEffect`, `RestoreManaEffect`, `BuffEffect`, `DebuffEffect`, dan `RemoveStatusEffect`. Status tersedia sebagai definisi `PoisonEffect`, `BurnEffect`, `RegenerationEffect`, dan `StunEffect`. Status memiliki durasi serta aturan `REPLACE`, `REFRESH_DURATION`, atau `ADD_STACK`; `EffectExecutor.execute_status_turns(target)` menjalankan tick dan menghapus status setelah durasinya habis. Untuk pemrosesan status yang konsisten, panggil fungsi ini sekali pada titik tick turn yang ditentukan battle system.
+
+Durasi buff/debuff `0` berarti perubahan permanen. Actor yang menerapkan `change_stat` menentukan cara menyimpan stat sementara dan mengembalikannya saat durasi habis.
+
+`EffectTarget` adalah adapter bertipe antara effect dan actor. Implementasi actor harus menyediakan operasi HP, MP, stat, serta skip turn. Adapter dasar menyimpan status runtime per target; `EffectStatusInstance` menyimpan definisi, source, durasi tersisa, dan jumlah stack. Resource effect tidak menyimpan state runtime.
+
+### Integrasi yang tersedia saat ini
+
+Proyek belum memiliki `Character`, `CharacterInstance`, `CharacterStats`, battle loop, SkillData, EquipmentData, atau inventory runtime. `CharacterData` hanya mendeskripsikan stat awal dan tidak memiliki method untuk mengubah HP/MP. Karena itu belum ada actor konkret untuk menghubungkan ke `EffectTarget`; implementasi adapter harus memanggil method actor yang kelak dibuat. Data `ItemData.effects` sudah memakai typed array `EffectData`, tetapi pemakaian item belum mengeksekusi effect karena belum ada sistem inventory/runtime.
+
+### Contoh pemakaian
+
+Item menyimpan resource effect, lalu sistem pemanggil membentuk context dan memanggil executor:
+
+```gdscript
+var context := EffectContext.new(target_adapter, user, EffectContext.Origin.ITEM)
+var results := EffectExecutor.new().execute_many(item.effects, context)
+```
+
+Skill atau equipment dapat menyimpan array `EffectData` yang sama dan memakai executor identik dengan origin masing-masing. Contoh `.tres` tersedia di `resources/effects/`; item potion saat ini mereferensikan Heal/RestoreMana resource yang sama.
+
+Contoh payload skill yang menyembuhkan sekaligus menghapus Poison:
+
+```gdscript
+var skill_effects: Array[EffectData] = [
+	load("res://resources/effects/healing/heal_50.tres"),
+	load("res://resources/effects/healing/remove_poison.tres"),
+]
+var context := EffectContext.new(target_adapter, caster, EffectContext.Origin.SKILL)
+var results := EffectExecutor.new().execute_many(skill_effects, context)
+```
+

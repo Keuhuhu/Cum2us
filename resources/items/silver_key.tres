@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bpjon8lvovh0n"]
 
-[ext_resource type="Script" path="res://scripts/inventory/item_data.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/items/loot/silver_key_16x16.png" id="2"]
+[ext_resource type="Script" uid="uid://chr1a56fi6wjq" path="res://scripts/inventory/item_data.gd" id="1"]
+[ext_resource type="Script" uid="uid://c3outopervuxg" path="res://scripts/effects/effect_data.gd" id="1_uq76k"]
+[ext_resource type="Texture2D" uid="uid://b0hcdutr4dj5h" path="res://assets/items/loot/silver_key_16x16.png" id="2"]
 
 [resource]
 script = ExtResource("1")
@@ -10,11 +11,5 @@ display_name = "Silver Key"
 description = "A silver key that may unlock a sealed door."
 icon = ExtResource("2")
 category = 4
-buy_price = 0
-sell_price = 0
 stackable = false
 max_stack = 1
-use_effect = 0
-effect_amount = 0
-usable_in_battle = false
-usable_outside_battle = false

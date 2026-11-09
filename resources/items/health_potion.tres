@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://5qa2wy6no5mv"]
 
-[ext_resource type="Script" path="res://scripts/inventory/item_data.gd" id="1"]
-[ext_resource type="Texture2D" path="res://assets/items/alchemy/health_potion_16x16.png" id="2"]
+[ext_resource type="Script" uid="uid://chr1a56fi6wjq" path="res://scripts/inventory/item_data.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bnuq354vhtb05" path="res://assets/items/alchemy/health_potion_16x16.png" id="2"]
+[ext_resource type="Resource" path="res://resources/effects/healing/heal_50.tres" id="3"]
+[ext_resource type="Script" uid="uid://c3outopervuxg" path="res://scripts/effects/effect_data.gd" id="4"]
 
 [resource]
 script = ExtResource("1")
@@ -9,12 +11,8 @@ item_id = &"health_potion"
 display_name = "Health Potion"
 description = "Restores HP to one ally."
 icon = ExtResource("2")
-category = 0
 buy_price = 50
 sell_price = 25
-stackable = true
-max_stack = 99
-use_effect = 1
-effect_amount = 50
+effects = Array[ExtResource("4")]([ExtResource("3")])
 usable_in_battle = true
 usable_outside_battle = true

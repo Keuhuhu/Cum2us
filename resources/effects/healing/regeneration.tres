@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RegenerationEffect" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/effects/types/regeneration_effect.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+effect_name = "Regeneration"
+description = "Restores HP at the start of each turn."
+status_id = &"regeneration"
+duration_turns = 3
+stacking_policy = 1
+healing_per_turn = 5

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="HealEffect" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/effects/types/heal_effect.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+effect_name = "Heal 50"
+description = "Restore 50 HP to the target."
+amount = 50
