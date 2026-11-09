@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/IconSword.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+skill_id = &"hammer"
+display_name = "Hammer"
+description = "Deal damage to the target enemy equal to 1/4 of their current HP."
+category = 0
+icon = ExtResource("2")
+target = 0
+effect = 0
+mp_cost = 100
+hit_count = 1
+power_multiplier = 1.0
+scaling_stat = &"attack"
+element = &"none"
+duration_turns = 0
+source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
+source_note = "MP Cost: 100 | HP Damage: | (b.hp*1/4)"

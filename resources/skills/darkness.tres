@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/ElementDark.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+skill_id = &"darkness"
+display_name = "Darkness"
+description = "Deal dark damage to all enemies."
+category = 1
+icon = ExtResource("2")
+target = 1
+effect = 0
+mp_cost = 20
+hit_count = 1
+power_multiplier = 5.0
+scaling_stat = &"magic_attack"
+element = &"dark"
+duration_turns = 0
+source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
+source_note = "MP Cost: 20 | All Enemies | HP Damage: | (500 + a.mat * 5 - b.mdf * 2)"

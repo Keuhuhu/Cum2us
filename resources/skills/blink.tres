@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/IconKatana.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+skill_id = &"blink"
+display_name = "Blink"
+description = "Deliver a powerful blow to the target enemy. 90% chance to kill outright. Drains HP."
+category = 0
+icon = ExtResource("2")
+target = 0
+effect = 5
+mp_cost = 30
+hit_count = 1
+power_multiplier = 6.0
+scaling_stat = &"attack"
+element = &"none"
+duration_turns = 0
+source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
+source_note = "MP Cost: 30 | HP Damage: | (a.atk * 6 - b.def * 2) | Add State 90%"

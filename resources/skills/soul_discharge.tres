@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/ElementHoly.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+skill_id = &"soul_discharge"
+display_name = "Soul Discharge"
+description = "Shoot 4 soul arrows at random enemies. The power scales with the caster's Magic."
+category = 1
+icon = ExtResource("2")
+target = 2
+effect = 0
+mp_cost = 28
+hit_count = 4
+power_multiplier = 6.0
+scaling_stat = &"magic_attack"
+element = &"holy"
+duration_turns = 0
+source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
+source_note = "MP Cost: 28 | 4 Random Enemies | HP Damage: | (a.mat * 6 - b.mdf * 2) | Ignores Magic Reflection"

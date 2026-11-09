@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/IconAxe.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+skill_id = &"slaughter_axe"
+display_name = "Slaughter Axe"
+description = "Deliver powerful blows to 3 enemies and reduce their Defense."
+category = 0
+icon = ExtResource("2")
+target = 2
+effect = 5
+mp_cost = 15
+hit_count = 1
+power_multiplier = 3.0
+scaling_stat = &"attack"
+element = &"none"
+duration_turns = 10
+source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
+source_note = "MP Cost: 15 | 3 Random Enemies | (a.atk * 3 - b.def * 2) | Add State 100% | Heavily debuffs target DEF for 10 turns."

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/IconSword.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+skill_id = &"knight_s_pride"
+display_name = "Knight's Pride"
+description = "Make the user nearly immune to physical and magical attacks for some time and doubles HP."
+category = 0
+icon = ExtResource("2")
+target = 3
+effect = 4
+mp_cost = 40
+hit_count = 1
+power_multiplier = 1.0
+scaling_stat = &"attack"
+element = &"none"
+duration_turns = 10
+source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
+source_note = "MP Cost: 40 | For ten turns: | - DEF * 10% | - RES * 10% | - MHP * 200%"

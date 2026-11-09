@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/ElementFire.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+skill_id = &"helbreath_sword"
+display_name = "Helbreath Sword"
+description = "Deal fire damage to 4 enemies. If they are burning, double damage."
+category = 0
+icon = ExtResource("2")
+target = 2
+effect = 0
+mp_cost = 30
+hit_count = 1
+power_multiplier = 6.0
+scaling_stat = &"attack"
+element = &"fire"
+duration_turns = 0
+source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
+source_note = "MP Cost: 30 | 4 Random Enemies | HP Damage: | ((a.atk * 6 - b.def * 2)*(If burning = * 2)) | Unavoidable"
