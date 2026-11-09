@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/IconSword.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+skill_id = &"deadman_s_blow"
+display_name = "Deadman's Blow"
+description = "Deal damage to the target enemy. The lower the user's HP is, the greater the damage."
+category = 0
+icon = ExtResource("2")
+target = 0
+effect = 0
+mp_cost = 10
+hit_count = 1
+power_multiplier = 4.0
+scaling_stat = &"attack"
+element = &"none"
+duration_turns = 0
+source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
+source_note = "MP Cost: 10 | HP Damage: | (a.atk * 4 - b.def * 2) | Multiplies the above by (a.mhp/a.hp), capping at 10."

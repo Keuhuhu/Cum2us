@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/SkillRestore.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+skill_id = &"restore"
+display_name = "Restore"
+description = "Restore HP of all allies."
+category = 1
+icon = ExtResource("2")
+target = 5
+effect = 1
+mp_cost = 12
+hit_count = 1
+power_multiplier = 2.0
+scaling_stat = &"magic_attack"
+element = &"none"
+duration_turns = 0
+source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
+source_note = "MP Cost: 12 | All Allies | HP Recovery: | (500 + a.mat * 2)"

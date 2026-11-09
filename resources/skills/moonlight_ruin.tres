@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/skills/skill_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/skills/wiki/WeaponMoonlightGreatsword.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+skill_id = &"moonlight_ruin"
+display_name = "Moonlight Ruin"
+description = "Deal 2 unavoidable hits to all enemies. The damage scales with both Attack and Magic."
+category = 0
+icon = ExtResource("2")
+target = 1
+effect = 0
+mp_cost = 40
+hit_count = 2
+power_multiplier = 6.0
+scaling_stat = &"attack"
+element = &"none"
+duration_turns = 0
+source_page = "https://blacksouls.miraheze.org/Black_Souls_I/Skills"
+source_note = "MP Cost: 40 | All Enemies | 2 Times | HP Damage: | (a.atk * 6 + a.mat * 6 - b.def * 2 - b.mdf * 2) | Unavoidable"
