@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StatGrowthData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/character/stat_growth_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+max_level = 99
+max_hp_per_level = 10.0
+max_mp_per_level = 2.0
+attack_per_level = 2.0
+defense_per_level = 1.0
+magic_attack_per_level = 2.0
+magic_defense_per_level = 1.0
+speed_per_level = 0.5
+luck_per_level = 0.2
+base_experience = 100
+experience_factor = 1.5

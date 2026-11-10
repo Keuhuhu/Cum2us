@@ -8,6 +8,7 @@ extends Resource
 @export_multiline var description: String
 @export var character_class: StringName
 @export var portrait: Texture2D
+@export var stat_growth: StatGrowthData
 
 @export_group("Progression")
 @export_range(1, 999, 1) var starting_level: int = 1
@@ -21,10 +22,21 @@ extends Resource
 @export_range(0, 99999, 1) var magic_attack: int = 10
 @export_range(0, 99999, 1) var magic_defense: int = 5
 @export_range(0, 99999, 1) var speed: int = 10
+@export_range(0, 99999, 1) var luck: int = 0
 
 @export_group("Starting abilities")
-@export var starting_skills: Array[StringName] = []
+@export var starting_skills: Array[SkillData] = []
 
 
 func is_valid_definition() -> bool:
-	return not character_id.is_empty() and not display_name.strip_edges().is_empty() and max_hp > 0
+	return not character_id.is_empty() and not display_name.strip_edges().is_empty() \
+		and max_hp > 0 and max_mp >= 0 \
+		and attack >= 0 and defense >= 0 and magic_attack >= 0 \
+		and magic_defense >= 0 and speed >= 0 and luck >= 0 \
+		and starting_level >= 1 and starting_level <= get_max_level() \
+		and starting_experience >= 0 \
+		and (stat_growth == null or stat_growth.is_valid_definition())
+
+
+func get_max_level() -> int:
+	return stat_growth.max_level if stat_growth != null else 999
