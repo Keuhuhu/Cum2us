@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StatModifier" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/character/stat_modifier.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+modifier_id = &"iron_sword_attack"
+stat = &"attack"
+operation = 0
+amount = 5.0

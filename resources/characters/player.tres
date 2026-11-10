@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scripts/character/character_data.gd" id="1"]
+[ext_resource type="Resource" path="res://resources/character_growth/player_growth.tres" id="2"]
 
 [resource]
 script = ExtResource("1")
@@ -8,6 +9,7 @@ character_id = &"player"
 display_name = "Adventurer"
 description = "A customizable party member."
 character_class = &"wanderer"
+stat_growth = ExtResource("2")
 starting_level = 1
 starting_experience = 0
 max_hp = 120
@@ -17,4 +19,3 @@ defense = 8
 magic_attack = 10
 magic_defense = 8
 speed = 10
-starting_skills = Array[StringName]([])
